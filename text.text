@@ -1,0 +1,20 @@
+
+
+    
+        // Votre code JavaScript ici
+       /* const openModalButton = document.getElementById('openModalButton');
+        const closeModalButton = document.getElementById('closeModalButton');
+        const modal = document.getElementById('myModal');
+
+        openModalButton.addEventListener('click', openModal);
+        closeModalButton.addEventListener('click', closeModal);
+
+        function openModal() {
+            modal.style.display = 'flex';
+            // Fermer la modale automatiquement après 4 secondes
+            setTimeout(closeModal, 4000);
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }  */

@@ -7,21 +7,18 @@
     <title>Accordion</title>
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/script.js" ></script>
   
 </head>
 
-<body>
-    <button id="openModalButton">Open Modal</button>
+<button id="openPopupButton">Ouvrir la popup</button>
 
-   
-    <div id="myModal">
-        <div class="modal-content">
-          
-            <p>Contenu de la modale</p>
-            <button id="closeModalButton">Fermer</button>
-        </div>
+<div id="popup" class="modal">
+    <div class="modal-content">
+        <span id="closePopup" class="close">&times;</span>
+        <p>I'm a popup window!...Need some help ?</p>
     </div>
+</div>
 
 
 
@@ -116,24 +113,27 @@
         }
     </style>
     <script>
-        // Votre code JavaScript ici
-        const openModalButton = document.getElementById('openModalButton');
-        const closeModalButton = document.getElementById('closeModalButton');
-        const modal = document.getElementById('myModal');
+        document.getElementById('openPopupButton').addEventListener('click', openPopup);
 
-        openModalButton.addEventListener('click', openModal);
-        closeModalButton.addEventListener('click', closeModal);
+function openPopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block';
 
-        function openModal() {
-            modal.style.display = 'flex';
-            // Fermer la modale automatiquement après 4 secondes
-            setTimeout(closeModal, 4000);
-        }
+    // Fermer la popup automatiquement après 4 secondes
+    setTimeout(closePopup, 4000);
+}
 
-        function closeModal() {
-            modal.style.display = 'none';
-        }
-    </script>
+document.getElementById('closePopup').addEventListener('click', closePopup);
+
+function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none';
+}
+
+
+</script>
+
+   <script src="./assets/js/script.js"defer></script>
 </body>
 
 </html>
