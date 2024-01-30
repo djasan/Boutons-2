@@ -41,7 +41,7 @@ body {
 }
 .window {
     display: none;
-    border: 8px solid hwb(0 11% 88%);
+    border: 8px solid hwb(0 2% 48%);
     border-radius: 5px;
     background-color:teal;
     padding: 10px;
