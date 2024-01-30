@@ -1,25 +1,28 @@
-const buttons = document.getElementsByClassName('btn');
-const windows = document.getElementsByClassName('window');
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.btn');
+    const windows = document.querySelectorAll('.window');
+    let currentWindow = null;
 
-// Générer du Lorem Ipsum unique pour chaque fenêtre
-function generateUniqueLoremIpsum() {
-    return 'Lorem ipsum ' + Math.random().toString(36).substr(2, 5); // Exemple simple pour la démo
-}
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            const targetWindowId = this.getAttribute('data-target');
+            const targetWindow = document.getElementById(targetWindowId);
 
-// Ajoutez un gestionnaire d'événements à chaque bouton
-Array.from(buttons).forEach((button, index) => {
-    button.addEventListener('click', () => {
-        // Fermer toutes les fenêtres
-        Array.from(windows).forEach((window) => {
-            window.style.display = 'none';
+            if (currentWindow) {
+                currentWindow.style.display = 'none';
+                currentWindow.classList.remove('active');
+            }
+
+            if (currentWindow !== targetWindow) {
+                targetWindow.style.display = 'block';
+                targetWindow.classList.add('active');
+                currentWindow = targetWindow;
+            } else {
+                currentWindow = null;
+            }
         });
-
-        // Afficher la fenêtre correspondante
-        const currentWindow = windows[index];
-        currentWindow.style.display = 'block';
-
-        // Mettre à jour le texte de la fenêtre avec un Lorem Ipsum unique
-        currentWindow.innerText = generateUniqueLoremIpsum();
     });
 });
+
+
 
