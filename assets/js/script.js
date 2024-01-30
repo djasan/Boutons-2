@@ -36,11 +36,4 @@ accordions.forEach((accordion) => {
         }
     });
 });
-// Récupérez le corps de la page
-//const body = document.body;
 
-// Ajoutez la classe dark-mode au clic sur un bouton (par exemple)
-//document.getElementById('toggle-dark-mode-button').addEventListener('click', function() {
- // body.classList.toggle('dark-mode');
-//});
-popup();
