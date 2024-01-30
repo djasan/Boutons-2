@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+
     const buttons = document.querySelectorAll('.btn');
     const windows = document.querySelectorAll('.window');
     let currentWindow = null;
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-});
+
 
 
 
