@@ -1,46 +1,83 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boutons</title>
+    <title>Accordion</title>
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/scrip.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+    <script type="module" src="./assets/js/modules/popup.js"defer></script>
 </head>
 
 <body>
-    <button class="btn" data-target="window1">Lorem-1</button>
-    <button class="btn" data-target="window2">Lorem-2</button>
-    <button class="btn" data-target="window3">Lorem-3</button>
-    <div id="window1" class="window">
+    <button id="openPopupButton">Open Popup</button>
 
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-        </p>
-        <img src="./assets/img/image-stand-out.jpg" alt="logotest">
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <span class="close" id="closePopup">&times;</span>
+        <p>I'm a popup window!... Need some help?</p>
+      </div>
     </div>
 
-    <div id="window2" class="window">
-        <p>
-            Curabitur euismod interdum nunc, vel facilisis turpis lacinia ut...
-        </p>
-        <img src="./assets/img/image-transform.jpg" alt="australia">
 
-    </div>
 
-    <div id="window3" class="window">
-        <p>
-            Aliquam auctor aliquam ipsum, a euismod tortor ultrices non. Nunc pharetra quam eu augue accumsan, id
-            tristique est scelerisque. Maecenas fermentum quam vel est feugiat, vitae fringilla risus malesuada. Nam sit
-            amet bibendum mi. Quisque tincidunt euismod sapien, id ultricies nunc ultricies in. Sed at vulputate metus,
-            nec bibendum arcu. Aenean dictum, nulla ac ultrices dignissim, arcu sem feugiat turpis, sit amet tincidunt
-            est erat vitae lacus. Curabitur sed tellus nec purus ullamcorper consectetur a eget lacus. Vivamus a lacinia
-            purus. Curabitur quis accumsan felis. Donec sed ligula in arcu rhoncus convallis at ac metus. Quisque
-            vehicula, enim sit amet ultricies bibendum, ex velit bibendum libero, sit amet rhoncus sem neque nec tellus.
-            Integer condimentum justo sit amet purus suscipit, eget consectetur risus lacinia.
-        </p>
-        <img src="./assets/img/image-gallery-orange.jpg" alt="image-gallery-orange">
+
+
+    
+    <div class="accordion">
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac metus eu justo accumsan mattis. . </p>
+        <span class="icon"><img src="./assets/images/chevron.svg" alt="arrow"></span>
     </div>
+    <div class="panel" id="content1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora necessitatibus fugit, voluptatibus quia
+            reprehenderit ullam ducimus enim nostrum amet dignissimos!</p>
+            <img src="./assets/img/image-gallery-orange.jpg" alt="image-gallery-orange">
+    </div>
+    <div class="accordion">
+        <p>In hac habitasse platea dictumst. Aliquam auctor aliquam ipsum, a euismod tortor ultrices non. </p>
+        <span class="icon"><img src="./assets/images/chevron.svg" alt="arrow"></span>
+    </div>
+    <div class="panel">
+        <p>Nunc pharetra quam eu augue accumsan, id tristique est scelerisque. Maecenas fermentum quam vel est feugiat, 
+            vitae fringilla risus malesuada. Nam sit amet bibendum mi. Quisque tincidunt euismod sapien, id ultricies nunc ultricies in.
+             Sed at vulputate metus, nec bibendum arcu. Aenean dictum, nulla ac ultrices dignissim, arcu sem feugiat turpis, sit amet tincidunt est erat vitae lacus. 
+             Curabitur sed tellus nec purus ullamcorper consectetur a eget lacus. Vivamus a lacinia purus. 
+             Curabitur quis accumsan felis. Donec sed ligula in arcu rhoncus convallis at ac metus. Quisque vehicula, enim sit amet ultricies bibendum,
+              ex velit bibendum libero, sit amet rhoncus sem neque nec tellus. .</p>
+        <img src="./assets/img/image-gallery-cone.jpg" alt="image-gallery-cone">
+    </div>
+    <div class="accordion">
+        <p>Integer condimentum justo sit amet purus suscipit, eget consectetur risus lacinia</p>
+        <span class="icon"><img src="./assets/images/chevron.svg" alt="arrow"></span>
+    </div>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, minima! Rerum, officiis quidem placeat quae
+            ipsam, nobis ipsa ullam in unde tenetur cum tempore corrupti.</p>
+            <img src="./assets/img/image-stand-out.jpg" alt="image-stand-out">
+    </div>
+    <div class="accordion">
+        <p> Why do we use it? </p> <span class="icon"><img src="./assets/images/chevron.svg" alt="arrow"></span>
+    </div>
+    <div class="panel">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure explicabo tempore dolor itaque, aliquid
+            aspernatur modi incidunt at vel neque nobis, nemo corrupti ipsam tempora cupiditate nisi. Veritatis corporis
+            repellendus, dolor, sit architecto repellat magni non assumenda reiciendis quam eveniet? Suscipit fugit
+            dolor nihil, esse nobis placeat facilis quia. Cum perferendis dignissimos dolorum blanditiis veritatis iure
+            nostrum molestiae voluptates quo, sequi id culpa quibusdam aut maxime totam. Magnam, tempora quis
+            repellendus neque ipsam iure vel cupiditate minus nihil voluptatem, perferendis cum aspernatur itaque fuga
+            eaque magni molestias asperiores rerum ratione fugit officiis esse ea sit? Deleniti recusandae unde
+            perspiciatis labore officiis totam veritatis iusto, nihil quam dicta, nisi facere velit sunt, voluptatem
+            libero perferendis nostrum consequuntur aut voluptates alias. Praesentium reiciendis vitae esse, veritatis
+            in dignissimos, velit natus quidem possimus sequi odio accusamus aliquid, ratione officia. Iste earum
+            exercitationem placeat, quis voluptate dolorem doloribus consectetur. Earum possimus qui asperiores ut ad.
+            Consequuntur, maiores error? Cum, perspiciatis ea molestiae rem fuga magni impedit delectus saepe mollitia
+            consectetur a ratione inventore qui dolorum voluptas adipisci maiores quae hic alias fugit ad! Est natus
+            maiores vel blanditiis aliquam iure soluta molestias excepturi in pariatur et quas dolor asperiores sint
+            sequi, at sunt quam!</p>
+            <img src="./assets/img/image-transform.jpg" alt="image-transform">
+    </div>
+</body>
 
 </html>
